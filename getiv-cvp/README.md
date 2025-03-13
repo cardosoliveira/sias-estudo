@@ -1,54 +1,85 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto utiliza React, TypeScript e Vite para criar uma aplicação web moderna.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js versão 20.18
 
-## Expanding the ESLint configuration
+## Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Instale o Node.js versão 20.18 a partir do [site oficial](https://nodejs.org/).
+2. Clone este repositório e abra o projeto na pasta `GETIV-CVP`.
+3. Abra o terminal na pasta do projeto e execute o comando abaixo para instalar todas as dependências necessárias:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+   ```sh
+   npm install
+   ```
+
+## Execução
+
+Após a instalação das dependências, execute o comando abaixo para iniciar a aplicação:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Uma URL será exibida no terminal, onde a aplicação estará hospedada. Abra essa URL no seu navegador para visualizar a aplicação.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Estrutura do Projeto
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+A estrutura do projeto é a seguinte:
+
 ```
+.gitignore
+eslint.config.js
+index.html
+package.json
+README.md
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+public/
+    vite.svg
+src/
+    App.tsx
+    config.ts
+    index.css
+    main.tsx
+    vite-env.d.ts
+    assets/
+        CAIXA-LOGO.png
+        react.svg
+        icon/
+            icon_cadastro_produto.png
+            icon_consulta_produto.png
+            icon_default.png
+            ...
+    components/
+        Card/
+        Footer/
+        HeaderPage/
+        ModalWarning/
+        SideBar/
+    pages/
+        Home/
+        Produtos/
+    routes/
+        Router.tsx
+    services/
+        api.ts
+    types/
+        produto.ts
+```
+
+## Tecnologias Utilizadas
+
+- React
+- TypeScript
+- Vite
+- Styled-components
+- Axios
+- Material UI
+- FontAwesome
+- Notistack
