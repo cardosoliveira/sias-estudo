@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-Este projeto utiliza React, TypeScript e Vite para criar uma aplicação web moderna.
+Este projeto utiliza React, TypeScript e Vite
 
 ## Requisitos
 
