@@ -26,53 +26,6 @@ npm run dev
 
 Uma URL será exibida no terminal, onde a aplicação estará hospedada. Abra essa URL no seu navegador para visualizar a aplicação.
 
-## Estrutura do Projeto
-
-A estrutura do projeto é a seguinte:
-
-```
-.gitignore
-eslint.config.js
-index.html
-package.json
-README.md
-tsconfig.app.json
-tsconfig.json
-tsconfig.node.json
-vite.config.ts
-public/
-    vite.svg
-src/
-    App.tsx
-    config.ts
-    index.css
-    main.tsx
-    vite-env.d.ts
-    assets/
-        CAIXA-LOGO.png
-        react.svg
-        icon/
-            icon_cadastro_produto.png
-            icon_consulta_produto.png
-            icon_default.png
-            ...
-    components/
-        Card/
-        Footer/
-        HeaderPage/
-        ModalWarning/
-        SideBar/
-    pages/
-        Home/
-        Produtos/
-    routes/
-        Router.tsx
-    services/
-        api.ts
-    types/
-        produto.ts
-```
-
 ## Tecnologias Utilizadas
 
 - React
