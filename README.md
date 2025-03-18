@@ -9,7 +9,7 @@ Este projeto utiliza React, TypeScript e Vite
 ## Instalação
 
 1. Instale o Node.js versão 20.18 a partir do [site oficial](https://nodejs.org/).
-2. Clone este repositório e abra o projeto na pasta `GETIV-CVP`.
+2. Clone este repositório.
 3. Abra o terminal na pasta do projeto e execute o comando abaixo para instalar todas as dependências necessárias:
 
    ```sh
