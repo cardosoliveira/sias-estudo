@@ -12,16 +12,17 @@ import vectorDownIcon from "../../assets/icon/vector_down.png";
 import vectorUpIcon from "../../assets/icon/vector_up.png";
 import iconConsultaProduto from "../../assets/icon/icon_consulta_produto.png";
 import iconCadastroProduto from "../../assets/icon/icon_cadastro_produto.png";
+import { SidebarItems } from "../../enums/SidebarItens";
 
 interface SidebarProps {
-  onSubItemClick: (subItem: string) => void;
+  onSubItemClick: (subItem: SidebarItems) => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ onSubItemClick }) => {
   const [expandedItems, setExpandedItems] = useState<{
     [key: string]: boolean;
   }>({});
-  const [selectedSubItem, setSelectedSubItem] = useState<string>("");
+  const [selectedSubItem, setSelectedSubItem] = useState<SidebarItems | "">("");
 
   const toggleItem = (item: string) => {
     setExpandedItems((prev) => ({
@@ -30,12 +31,16 @@ const Sidebar: React.FC<SidebarProps> = ({ onSubItemClick }) => {
     }));
   };
 
-  const selectSubItem = (subItem: string) => {
+  const selectSubItem = (subItem: SidebarItems) => {
     setSelectedSubItem(subItem);
     onSubItemClick(subItem);
   };
 
-  const renderSubItem = (subItem: string, icon: string, label: string) => {
+  const renderSubItem = (
+    subItem: SidebarItems,
+    icon: string,
+    label: string
+  ) => {
     const Component =
       selectedSubItem === subItem ? SidebarSubItemSelected : SidebarSubItem;
     return (
@@ -59,20 +64,15 @@ const Sidebar: React.FC<SidebarProps> = ({ onSubItemClick }) => {
       {expandedItems["produtos"] && (
         <>
           {renderSubItem(
-            "consultaProduto",
+            SidebarItems.ConsultaProduto,
             iconConsultaProduto,
             "Consulta de Produto"
           )}
           {renderSubItem(
-            "cadastroProduto",
+            SidebarItems.CadastroProduto,
             iconCadastroProduto,
             "Cadastro de Produto"
           )}
-          {/* {renderSubItem(
-            "configuracaoProduto",
-            iconConfiguracaoProduto,
-            "Configuração de Produto"
-          )} */}
         </>
       )}
     </SidebarContainer>
